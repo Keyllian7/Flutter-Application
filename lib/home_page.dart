@@ -20,8 +20,17 @@ class HomePageState extends State<HomePage> {
         ),
         backgroundColor: Colors.red,
       ),
-      body: Center(
-        child: Text('Contagem: $counter', style: TextStyle(fontSize: 30)),
+      body: Container(
+        height: 200,
+        width: 200,
+        color: Colors.blue,
+        child: Center(
+          child: Container(
+          height: 100,
+          width: 100,
+          color: Colors.black,
+          ),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),

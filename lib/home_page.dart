@@ -19,12 +19,13 @@ class HomePageState extends State<HomePage> {
           'Aplicação com Flutter',
           style: TextStyle(color: Colors.white),
         ),
+        actions: [
+          ThemeButton(),
+        ],
         backgroundColor: Colors.red,
       ),
       body: Center(
-        child: Switch(value: AppController.instance.isDarkTheme, onChanged: (value) {
-          AppController.instance.changeTheme();
-        }),
+        child: Text('Contador: $counter'),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
@@ -34,6 +35,20 @@ class HomePageState extends State<HomePage> {
           });
         },
       ),
+    );
+  }
+}
+
+class ThemeButton extends StatelessWidget {
+  const ThemeButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Switch(
+      value: AppController.instance.isDarkTheme,
+      onChanged: (value) {
+        AppController.instance.changeTheme();
+      },
     );
   }
 }

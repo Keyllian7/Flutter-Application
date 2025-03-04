@@ -19,13 +19,20 @@ class HomePageState extends State<HomePage> {
           'Aplicação com Flutter',
           style: TextStyle(color: Colors.white),
         ),
-        actions: [
-          ThemeButton(),
-        ],
+        actions: [ThemeButton()],
         backgroundColor: Colors.red,
       ),
-      body: Center(
-        child: Text('Contador: $counter'),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text('Contagem: $counter', style: TextStyle(fontSize: 20)),
+            Text('Obrigado por usar nossos serviços!'),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),

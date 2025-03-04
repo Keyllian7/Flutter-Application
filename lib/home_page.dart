@@ -31,6 +31,28 @@ class HomePageState extends State<HomePage> {
           children: [
             Text('Contagem: $counter', style: TextStyle(fontSize: 20)),
             Text('Obrigado por usar nossos serviços!'),
+            Container(
+              height: 50,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+              Container(
+                height: 50,
+                width: 50,
+                color: Colors.blue,
+              ),
+              Container(
+                height: 50,
+                width: 50,
+                color: Colors.red,
+              ),
+              Container(
+                height: 50,
+                width: 50,
+                color: Colors.green,
+              ),
+            ],)
           ],
         ),
       ),

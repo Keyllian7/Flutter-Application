@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application/app_controller.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   State<StatefulWidget> createState() {
     return HomePageState();
@@ -22,7 +24,7 @@ class HomePageState extends State<HomePage> {
         actions: [ThemeButton()],
         backgroundColor: Colors.red,
       ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         height: double.infinity,
         child: Column(

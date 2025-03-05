@@ -13,12 +13,12 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-        child: SizedBox(
-          width: double.infinity,
-          height: double.infinity,
-          child: Padding(
-            padding: const EdgeInsets.all(5.0),
+    return Scaffold(
+        body: SingleChildScrollView(
+          padding: const EdgeInsets.all(5.0),
+          child: SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -46,10 +46,11 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () {
-                    if (email == 'key@example.com' && password == '1234')
+                    if (email == 'key@example.com' && password == '1234') {
                       print('logged in successfully');
-                    else
+                    } else {
                       print('invalid login');
+                    }
                   },
                   child: Text('Login'),
                 ),

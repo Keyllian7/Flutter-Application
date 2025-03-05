@@ -48,6 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     if (email == 'key@example.com' && password == '1234') {
                       print('logged in successfully');
+                      Navigator.of(context).pushReplacementNamed('/home');
                     } else {
                       print('invalid login');
                     }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/app_controller.dart';
+import 'package:flutter_application/home_page.dart';
 import 'package:flutter_application/login_page.dart';
 
 class MyApp extends StatelessWidget {
@@ -18,7 +19,11 @@ class MyApp extends StatelessWidget {
                     ? Brightness.dark
                     : Brightness.light,
           ),
-          home: LoginPage(),
+          initialRoute: '/',
+          routes: {
+            '/': (context) => LoginPage(),
+            '/home': (context) => HomePage(),
+          },
         );
       },
     );

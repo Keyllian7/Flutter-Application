@@ -20,7 +20,9 @@ class HomePageState extends State<HomePage> {
         child: Column(
           children: [
             UserAccountsDrawerHeader(
-              currentAccountPicture: Image.network('https://keyllian-bucket-aws.s3.sa-east-1.amazonaws.com/uploads/user/photo/41700ce3-3f4f-4c5b-ab61-f4b2ea89d7ee/profile_photo_3ee61735-4b77-489b-9aee-3fbd60d08f63.JPG'),
+              currentAccountPicture: ClipOval(
+                child: Image.network('https://drive.google.com/uc?id=1cqc5VDhQTgKeUv8JD9v3I65rSd3A_rCv'),
+                ),
               accountName: Text('Keyllian'),
               accountEmail: Text('key@example.com'),
             ),

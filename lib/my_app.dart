@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           theme: ThemeData(
-            primarySwatch: Colors.red,
+            primarySwatch: Colors.deepPurple,
             brightness:
                 AppController.instance.isDarkTheme
                     ? Brightness.dark

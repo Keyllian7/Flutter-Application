@@ -22,6 +22,14 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(
+                    width: 200,
+                    height: 200,
+                    child: Image.network(
+                        'https://drive.google.com/uc?export=view&id=1WvVzMBSzpvSL4jAtZmNPX3obVHRRlC6h'
+                    )
+                ),
+                SizedBox(height: 20),
                 TextField(
                   onChanged: (text) {
                     email = text;

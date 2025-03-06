@@ -11,10 +11,8 @@ class _LoginPageState extends State<LoginPage> {
   String email = '';
   String password = '';
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: SingleChildScrollView(
+  Widget _body(){
+    return SingleChildScrollView(
           padding: const EdgeInsets.all(5.0),
           child: SizedBox(
             width: MediaQuery.of(context).size.width,
@@ -55,10 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                 ElevatedButton(
                   onPressed: () {
                     if (email == 'key@example.com' && password == '1234') {
-                      print('logged in successfully');
                       Navigator.of(context).pushReplacementNamed('/home');
-                    } else {
-                      print('invalid login');
                     }
                   },
                   child: Text('Login'),
@@ -66,7 +61,26 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
           ),
-        ),
+        );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Stack(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height,
+              child: Image.asset(
+                'assets/images/stadium.jpg', fit: BoxFit.cover,
+              ),
+            ),
+            Container(
+              color: Colors.black.withAlpha((0.5 * 255).toInt()),
+            ),
+            _body(),
+          ],
+        )
     );
   }
 }

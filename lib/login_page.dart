@@ -25,8 +25,8 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(
                     width: 200,
                     height: 200,
-                    child: Image.network(
-                        'https://drive.google.com/uc?export=view&id=1WvVzMBSzpvSL4jAtZmNPX3obVHRRlC6h'
+                    child: Image.asset(
+                        'assets/images/logo.png'
                     )
                 ),
                 SizedBox(height: 20),

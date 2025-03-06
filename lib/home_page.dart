@@ -35,6 +35,14 @@ class HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
+              leading: Icon(Icons.heart_broken),
+              title: Text('Tinder'),
+              subtitle: Text('Challenge page'),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed('/tinder');
+              },
+            ),
+            ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text('Logout'),
               subtitle: Text('End the session'),

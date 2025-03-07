@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/app_controller.dart';
+import 'package:flutter_application/helpers/notification_system.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -47,6 +48,7 @@ class HomePageState extends State<HomePage> {
               title: Text('Logout'),
               subtitle: Text('End the session'),
               onTap: () {
+                NotificationSystem.show(context, 'Goodbye!', color: Colors.green);
                 Navigator.of(context).pushReplacementNamed('/');
               },
             ),

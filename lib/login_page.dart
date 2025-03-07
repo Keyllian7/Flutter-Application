@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/helpers/notification_system.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -60,7 +61,10 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       onPressed: () {
                         if (email == 'key@example.com' && password == '1234') {
+                          NotificationSystem.show(context, 'Login successful', color: Colors.green);
                           Navigator.of(context).pushReplacementNamed('/home');
+                        } else {
+                          NotificationSystem.show(context, 'Invalid email or password', color: Colors.red);
                         }
                       },
                       child: SizedBox(

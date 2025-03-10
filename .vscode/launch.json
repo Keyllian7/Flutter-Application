@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "fair_weather",
+            "cwd": "fair_weather",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "fair_weather (profile mode)",
+            "cwd": "fair_weather",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "fair_weather (release mode)",
+            "cwd": "fair_weather",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
